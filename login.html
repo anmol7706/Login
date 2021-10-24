@@ -8,35 +8,61 @@
             text-align: center;
             background-color:coral;
             color: white;
-            width: 300px;
+            margin: 200px 300px 50px 300px;
+            width: auto;
+        }
+        #submit:hover{
+            opacity: 0.6;
+            color:white;
+            background-color:black;
+        }
+        #reset:hover{
+            opacity: 0.6;
+            color:white;
+            background-color:black;
+        }
+        h2:hover{
+            color: rgb(5, 29, 5);
+        }
+        #para:hover{
+            color: violet;
         }
     </style>
 </head>
 
 <body>
     <div id="Form">
-        <form action="registration.html">
-            <table>
+        <h2>Login form</h2>
+        <form action="registration.html" style="margin:0px 200px 50px 220px;">
+            <table style="text-align: center;">
                 <tr>
-                    <td><label for="">User ID :</label></td>
-                    <td><input type="text" /></td>
+                    <td>
+                        <label for="userid">User ID :</label>
+                    </td>
+                    <td>
+                        <input type="text" name="userid" id="userid" placeholder="Enter your name" required minlength="3" pattern="[a-Z]">
+                    </td>
                 </tr>
                 <tr>
-                    <td><label for="">Password :</label></td>
-                    <td><input type="password" /></td>
+                    <td>
+                        <label for="pass">Password :</label>
+                    </td>
+                    <td>
+                        <input type="password" name="pass" id="pass" placeholder="Enter your password" required minlength="8" pattern="." title="Password must have eight charecters"/>
+                    </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>
-                        <input type="reset">
-                        <input type="submit">
+                        <input type="reset" id="reset">
+                        <input type="submit" id="submit">
                     </td>
                 </tr>
             </table>
         </form>
     </div>
-    <p>When you will hit the submit after entering the correct name and password button you will be redirected
-        to the registration page</p>
+    <p id="para" style="text-align: center;">When you will hit the submit button after entering the correct name and password you will be redirected
+        to the registration page of my restaurant</p>
 </body>
 
 </html>
